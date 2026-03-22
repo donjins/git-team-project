@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Portfolio</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0f172a;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #22c55e;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #22c55e;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #1e293b;
+    top: 30px;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero span {
+    color: #22c55e;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about, .skills, .projects, .contact {
+    background: #f1f5f9;
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+/* PROJECTS */
+.project-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Akihl</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+
+        <li class="dropdown">
+            <a href="#">Services ▼</a>
+            <div class="dropdown-content">
+                <a href="#">Web Dev</a>
+                <a href="#">App Dev</a>
+                <a href="#">AI Projects</a>
+            </div>
+        </li>
+
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+
+        <li class="dropdown">
+            <a href="#">More ▼</a>
+            <div class="dropdown-content">
+                <a href="#">Resume</a>
+                <a href="#">Blog</a>
+                <a href="#">Certifications</a>
+            </div>
+        </li>
+
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Hello, I'm <span>Akhil</span></h1>
+        <p>Full Stack Developer | AI Enthusiast</p>
+        <button class="btn">Hire Me</button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate developer building modern web applications and AI solutions.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Python</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project">
+            <h3>E-commerce</h3>
+            <p>Online shopping platform</p>
+        </div>
+        <div class="project">
+            <h3>Concert Booking</h3>
+            <p>Ticket booking system</p>
+        </div>
+        <div class="project">
+            <h3>AI Assistant</h3>
+            <p>Smart AI chatbot</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <textarea placeholder="Message"></textarea><br>
+    <button class="btn">Send</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Joseph Portfolio | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
